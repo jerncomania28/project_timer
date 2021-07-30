@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: orangered;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+}
+
+.container h1 {
+    font-size: 2.5rem;
+    font-family: fantasy;
+    text-transform: uppercase;
+    color: white;
+    margin: 40px auto;
+}
+
+.container .inputs input[type="number"] {
+    width: 400px;
+    height: 40px;
+    box-sizing: border-box;
+    padding: 5px;
+    text-indent: 10px;
+    margin: 10px;
+    outline: none;
+}
+
+.container .inputs input[type="number"] ::placeholder {
+    font-size: 14px;
+    color: gray;
+}
+
+.container .inputs input[type="date"] {
+    width: 200px;
+    height: 40px;
+    text-indent: 10px;
+    outline: none;
+}
+
+.container input[type="submit"] {
+    margin-top: 30px;
+    width: 150px;
+    height: 35px;
+    color: white;
+    background-color: purple;
+    border-radius: 10px 10px;
+    outline: none;
+
+}
+
+.container .paragraphs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.container .paragraphs p {
+    margin: 20px;
+    color: white;
+    font-size: 20px;
+    font-family: cursive;
+    font-weight: bolder;
+    text-transform: capitalize;
+}
+
+.container p {
+    margin-top: 15px;
+    color: white;
+    font-size: 25px;
+    font-family: cursive;
+    text-transform: capitalize;
+
+}

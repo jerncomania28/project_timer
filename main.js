@@ -34,23 +34,26 @@ function getStarting(){
     function end_Date(){
         let endYear , endMonth , end_date ;
      end_date = starting_date;
-     if(+(monthRequired.value) < 12){
-        endMonth = startingMonth + +(monthRequired.value);
+     let requiredMonth = Math.floor(+(monthRequired.value));
+
+     console.log(requiredMonth);
+     if( requiredMonth < 12){
+        endMonth = startingMonth + requiredMonth;
         if(endMonth >12){
             endYear = startingYear+ 1;
             endMonth = endMonth - 12;
         }else{
             endYear = startingYear;
         }
-    }else if(+(monthRequired.value) === 12 ){
+    }else if( requiredMonth === 12 ){
           endYear = startingYear + 1;
           endMonth = 1;
-     }else if(+(monthRequired.value) > 12 ){
-         endMonth = startingMonth + (+(monthRequired.value) % 12);
+     }else if(requiredMonth > 12 ){
+         endMonth = startingMonth + ( requiredMonth % 12);
 
-         let value = Math.floor((startingMonth + +(monthRequired.value))/12);
+         let value = Math.floor((startingMonth + requiredMonth)/12);
       
-           if(+(monthRequired.value) > 12){
+           if(requiredMonth > 12){
                endYear = startingYear + value;
                if(endMonth > 12){
                    endMonth = endMonth - 12;
@@ -102,6 +105,7 @@ function getStarting(){
  getStarting();
     
     }
+
 
 button.addEventListener('click' , getCurrent);
 
